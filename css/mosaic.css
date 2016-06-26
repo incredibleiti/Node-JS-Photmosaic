@@ -1,0 +1,372 @@
+*{
+	/* Universal reset: */
+	margin:0;
+	padding:0;
+}
+
+header,footer,
+article,section,
+hgroup,nav,
+figure{
+	/* Giving a display value to the HTML5 rendered elements: */
+	display:block;
+}
+
+body{
+	/* Setting the default text color, size, page background and a font stack: */
+	font-size:0.825em;
+	color:#fcfcfc;
+	background-color:#0A7E8C;
+	font-family:Arial, Helvetica, sans-serif;
+	animation: round 5s infinite;
+}
+@keyframes round {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: orange;
+  }
+}
+
+/* Hyperlink Styles: */
+
+a, a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+	border:none;
+}
+
+/* Headings: */
+
+h1,h2,h3{
+	font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+	text-shadow:0 1px 1px black;
+}
+
+h1{
+	/* The logo text */
+	font-size:3.5em;
+	padding:0.5em 0 0;
+	text-transform:uppercase;
+	font-family:forte,"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+}
+
+h3{
+	/* The slogan text */
+	font-family:forte,"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+	font-size:2em;
+	font-weight:normal;
+	margin:0 0 1em;
+}
+
+
+h2{
+	font-size:2.2em;
+	font-weight:normal;
+	letter-spacing:0.01em;
+	text-transform:uppercase;
+}
+
+p{
+	line-height:1.5em;
+	padding-bottom:1em;
+}
+
+/*----------Header div css--------------------*/
+.headerdiv {
+    background: #00c4cc;
+    color: #fff;
+    height: 110px;
+    position: relative;
+    padding: 30px;
+	text-align: center;
+
+    -moz-animation-name: dropHeader;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 0.6s;
+
+    -webkit-animation-name: dropHeader;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 0.6s;
+
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+}
+
+@-moz-keyframes dropHeader {
+    0% {
+        -moz-transform: translateY(-80px);
+    }
+    100% {
+        -moz-transform: translateY(0);
+    }
+}
+@-webkit-keyframes dropHeader {
+    0% {
+        -webkit-transform: translateY(-80px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*----------------------------------line div used to create border between header and section-----*/
+.line{
+	/* The dividing line: */
+	height:4px;
+	background-color:#F8F8FF;
+	border-bottom:1px solid #416371;
+	margin:1em 0;
+	overflow:hidden;
+}
+
+article .line{
+	/* The dividing line inside of the article is darker: */
+	background-color:#15242a;
+	border-bottom-color:#204656;
+	margin:1.3em 0;
+}
+
+footer .line{
+	margin:2em 0;
+}
+
+nav{
+	padding:0 5px;
+	position:absolute;
+	right:20px;
+	top:4em;
+	
+	border:1px solid #FCFCFC;
+
+	-moz-box-shadow:0 1px 1px #333333;
+	-webkit-box-shadow:0 1px 1px #333333;
+	box-shadow:0 1px 1px #333333;
+
+}
+
+/* The clearfix hack to clear the floats: */
+.clear 
+{
+  zoom: 1;
+  display: block;
+}
+		
+.clear:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/*------------The navigation bar css------------------*/
+/* The navigation styling: */
+
+nav ul li{
+	display:inline;
+}
+
+nav ul li a,
+nav ul li a:visited{
+	color:#565656;
+	display:block;
+	float:left;
+	font-size:1.25em;
+	font-weight:bold;
+	margin:5px 2px;
+	padding:7px 10px 4px;
+	text-shadow:0 1px 1px white;
+	text-transform:uppercase;
+}
+
+nav ul li a:hover{
+	text-decoration:none;
+	background-color:#FFBF00;
+}
+
+nav, article, nav ul li a,figure{
+	/* Applying CSS3 rounded corners: */
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	background-color : #F8F8FF;
+}
+
+/* Article styles: */
+/*--------------------------page section css-----------------*/
+#page{
+	width:90%;
+	margin:0 auto;
+	position:relative;
+	animation: pulse 5s infinite;
+}
+
+
+@keyframes pulse {
+  0% {
+    background-color: #8bc34a;
+  }
+  100% {
+    background-color: #3f51b5;
+  }
+}
+
+/*----------------Drop file div----------------*/
+#dropper {
+        height: 500px;
+		padding: 10px;
+		float: left;
+		width: 30%;
+		background-color: #4B0082;
+		border-radius: 6px;
+		cursor: pointer;
+		transition-property: background;
+		transition-duration: 0.5s;
+		transition-timing-function: linear;
+		border:2px dashed #F8F8FF;
+		line-height: 500px;
+		text-align: center;
+		margin-left:4%;
+		margin-top:9%;
+    }
+
+    #dropper.hover {
+        background: #f2337d;
+      }
+    canvas, img {
+        image-rendering: optimizeQuality;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+	  
+	  /*-------------------file upload button animation on hover------------*/ 
+	.hvr-grow-shadow {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: translateZ(0);
+	  transform: translateZ(0);
+	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	  -webkit-backface-visibility: hidden;
+	  backface-visibility: hidden;
+	  -moz-osx-font-smoothing: grayscale;
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	  -webkit-transition-property: box-shadow, transform;
+	  transition-property: box-shadow, transform;
+	}
+	.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+	  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+	  -webkit-transform: scale(1.1);
+	  transform: scale(1.1);
+	 
+	  background-color: #9F00C5;
+	}
+
+
+/*-----------class for file upload----------*/
+.upload{
+	font-size: .9em;
+    display: inline-block;
+    margin: 1em;
+    margin-left: 0;
+    color: #fff;
+    background-color: #f2337d;
+    padding: .6em 1.25em;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    clear: both;
+    -webkit-transition: background .15s linear,color .15s linear;
+    transition: background .15s linear,color .15s linear;
+    text-align: center;
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+
+/*-------------middle div for canvas----------*/
+.holder {
+padding: 0px;
+float: right;
+width: 58%;
+height: 90%;
+background-color: #9457EB;
+border:2px dashed #F8F8FF;
+border-radius: 6px;
+overflow: hidden;
+margin-right:3%;
+}
+/*-------------canvas css---------------------*/
+
+
+.canvascss {
+	
+	background-color: #9457EB;
+	border:2px dashed #F8F8FF;
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	margin-top:5%;
+}
+
+/* Footer styling: */
+
+footer{
+	margin-bottom:30px;
+	text-align:center;
+	font-size:0.900em;
+}
+
+
+footer p{
+	margin-bottom:-2.5em;
+	position:relative;
+}
+
+footer a,footer a:visited{
+	color:#cccccc;
+	background-color:#213e4a;
+	display:block;
+	padding:2px 4px;
+	z-index:100;
+	position:relative;
+}
+
+footer a:hover{
+	text-decoration:none;
+	background-color:#142830;
+}
+
+footer a.by{
+	float:left;
+
+}
+
+footer a.up{
+	float:right;
+}
