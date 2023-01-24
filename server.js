@@ -1,4 +1,4 @@
-// Simulates a mosaic server..
+// Simulates a mosaic server
 //
 // /             serves mosaic.html
 // /js/*         servers static files
